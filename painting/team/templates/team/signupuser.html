@@ -1,0 +1,17 @@
+{%  extends 'team/base.html'  %}
+{% load static %}
+
+{%  block content  %}
+
+      <h1> Регистрация: </h1>
+
+      <form method ='post' class = 'register'>
+             {%  csrf_token  %}
+             {{ form.as_p }}
+
+      <button class = 'bt'> Зарегистрироваться:  </button>
+
+      </form>
+
+
+{% endblock %}

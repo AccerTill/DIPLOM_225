@@ -1,0 +1,63 @@
+{% extends 'sorting/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{{ error }}
+
+<!--{{  picture.name  }}-->
+
+<!--{{ picture.picture }}-->
+
+
+{% if user.is_authenticated %}
+<form method ="POST"  enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class ='btn'> Сохранить </button>
+</form>
+{% endif %}
+
+
+
+{% if user.is_authenticated %}
+    <form action ='{% url "soldpicture" picture.id  %}' method ='POST' enctype="multipart/form-data">
+        {%  csrf_token %}
+        <button class = "btn "> Купить </button>
+    </form>
+
+{% else %}
+    <form action ='{% url "soldpicture" picture.id  %}' method ='POST' enctype="multipart/form-data">
+        {%  csrf_token %}
+            <div class = 'wrap'>
+        <ul>
+            <li>  {{ picture.name }}   </li>
+            <li>  {{ picture.author }} </li>
+            <li>  {{ picture.price }}  </li>
+        </ul>
+            </div>
+        <button class = "btn "> Купить </button>
+    </form>
+{% endif %}
+
+
+
+
+
+{% if user.is_authenticated %}
+    <form action ='{% url "deletepicture" picture.id  %}' method ='POST' enctype="multipart/form-data">
+        {%  csrf_token %}
+        <button class = "btn "> Удалить </button>
+    </form>
+{% endif %}
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'sorting/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<h3> Оставьте отзыв </h3>
+
+<form class='bg' method="POST"  enctype="multipart/form-data">
+         {% csrf_token %}
+
+          <div class="form__field">
+               <label for="formInput#text"> Имя {{  form.name }} </label>
+            {{ field }}
+          </div>
+
+          <div class="form__field">
+               <label for="formInput#text">Текст {{  form.text }} </label>
+            {{ field }}
+          </div>
+    <input class="btn" type="submit" value='Разместить'/>
+
+
+
+</form>
+
+
+
+
+{% endblock %}

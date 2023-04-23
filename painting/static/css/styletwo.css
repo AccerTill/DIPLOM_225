@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.test {
+     color: red;
+}
+
+body{
+     padding: 0;
+     margin: 0;
+     background: #c4a8ec;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-style: italic;
+ }
+
+
+ .wrap{
+     max-width: 1250px;
+     margin: 0 auto;
+     padding: 30px;
+     box-sizing: border-box;
+ }
+
+
+
+
+ .wrap1{
+     background-color: crimson;
+     max-width: 1250px;
+     margin: 0 auto;
+     padding: 30px;
+     box-sizing: border-box;
+ }
+
+
+ .menu1 {
+     color: #771541;
+     font-size: x-large;
+     text-shadow: 1px 1px 2px rgb(207, 219, 192);
+     box-sizing: border-box;
+     background-color: #eca8cb;
+     padding: 20px 20px 60px;
+     /* border-bottom: 6px solid #a68ecd; */
+     box-shadow: 3px 6px 7px #6036a3;
+     max-height: 4.5cm;
+}
+
+
+
+/* .block {
+
+     display: flex;
+     flex-wrap: wrap;
+     justify-content:left;
+     margin-bottom: 30px;
+     box-shadow: #baa8ec;
+   
+} */
+
+
+.text {
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     text-align: left;
+     text-indent: 90px;
+     font-size: x-large;
+     text-shadow: 1px 2px 1px rebeccapurple;
+     box-sizing: border-box;
+     width: 760px;
+ }
+
+
+ .description {
+     color: #6036a3;
+    font-family: Lobster;
+    font-size: x-large;
+    text-indent: 30px;
+    text-shadow: 1px 1px 1px rgb(65, 28, 101);
+    text-align: justify;
+ }
+
+
+.img{
+     max-height:100px;
+     max-width: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     position: relative;
+}
+
+h1 {
+     color: #771556;
+     font-size: xxx-large;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     text-align: center;
+     font-weight: 800;
+     text-shadow: 2px 4px 3px rebeccapurple;
+}
+
+.pic3{
+     max-height:420px;
+     max-width: auto;
+     justify-content: center;
+     box-shadow: 0px 0px 10px 5px #14336f;
+}
+
+.pic2{
+     max-height:620px;
+     justify-content: center;
+     opacity: .9;
+}
+
+
+.genre {
+     color: rgb(250, 250, 250);
+     font-size: x-large;
+     font-weight: 600;
+     text-shadow: 2px 4px 3px rebeccapurple;
+     text-align: justify;
+     text-indent: 30px;
+}
+
+
+
+
+
+
+ .detail {
+     font-size: larger;
+     margin-top: 3%;
+     background-color: #baa8ec;
+     color: #3a1577;
+     max-width: auto;
+     text-align: justify;
+     margin-top: 10px;
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-bottom: 20px;
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-bottom: 12px;
+     padding-top: 20px;
+     box-shadow: 0px 0px 10px 5px #14336f;
+ }
+
+
+ h2 {
+     font-size: smaller
+ }
+
+
+ .element_blog {
+
+     font-size: larger;
+     margin-top: 3%;
+     background-color: #baa8ec;
+     color: #3a1577;
+     max-width: auto;
+     text-align: justify;
+     margin-top: 10px;
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-bottom: 20px;
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-bottom: 12px;
+     padding-top: 20px;
+     box-shadow: 0px 0px 10px 5px #14336f;
+ }
+
+ .logo {
+    max-width: 60px;
+ }
+
+.menu{
+     color: #481b8f;
+     font-size: x-large;
+     text-shadow: 1px 1px 2px rgb(207, 219, 192);
+     box-sizing: border-box;
+     background-color: #baa8ec;
+     padding: 20px 20px 60px;
+     /* border-bottom: 6px solid #a68ecd; */
+     box-shadow: 3px 6px 7px #6036a3;
+     max-height: 4.5cm;
+}
+
+.menu .wrap{
+     display: flex;
+     flex-wrap:wrap;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.menu ul{
+     display: flex;
+     list-style-type: none;
+}
+
+.menu li{
+     margin-left: 40px;
+}
+
+.menu a{
+     color: rgb(208, 219, 230);
+     font-weight: bold;
+     font-size: larger;
+     text-decoration: none;
+     text-shadow: 2px 2px 2px #6036a3;
+}
+
+.pic{
+     max-height:400px;
+     max-width: auto;
+}
+
+
+.imp{
+     color: brown;
+     font-size: x-large;
+
+}
+
+
+
+

@@ -1,0 +1,31 @@
+{%  extends 'team/base.html'  %}
+{% load static %}
+{%  block content  %}
+
+        {{ error }}
+        {{ team.title }}
+
+<div class ='but'>
+
+        <form  method ="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class ='btn'> Сохранить </button>
+        </form>
+
+<form action="{% url 'completeteam' team.id %}"  method="POST">
+{% csrf_token %}
+
+    <button class='btn good' > Выполнено </button>
+</form>
+
+<form action="{% url 'deleteteam' team.id %}"  method="POST">
+{% csrf_token %}
+
+    <button class='btn remove' > Удалить </button>
+</form>
+
+</div>
+
+
+{% endblock %}

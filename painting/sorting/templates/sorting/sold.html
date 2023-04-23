@@ -1,0 +1,23 @@
+{% extends 'sorting/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+
+<p> SOLD </p>
+
+    {% for team in teams  %}
+
+
+     {{ team.name }}
+     {{ team.price }}
+
+
+        {% endfor %}
+
+
+{% endblock %}
+

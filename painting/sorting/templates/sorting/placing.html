@@ -1,0 +1,58 @@
+{% extends 'sorting/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<h2>Разместите картину на продажу </h2>
+
+
+<h2>  {{ error }}  </h2>
+
+<form class='bg' method="POST"  enctype="multipart/form-data">
+         {% csrf_token %}
+
+          <div class="form__field">
+               <label for="formInput#text"> Название {{  form.name }} </label>
+            {{ field }}
+          </div>
+
+          <div class="form__field">
+               <label for="formInput#text">Изображение {{  form.picture }} </label>
+            {{ field }}
+          </div>
+
+          <div class="form__field">
+               <label for="formInput#text"> Автор {{  form.author }} </label>
+            {{ field }}
+          </div>
+
+          <div class="form__field">
+               <label for="formInput#text"> Жанр {{  form.genre }} </label>
+            {{ field }}
+          </div>
+
+          <div class="form__field">
+               <label for="formInput#text"> Размер {{  form.size }} </label>
+            {{ field }}
+          </div>
+
+          <div class="form__field">
+               <label for="formInput#text"> Цена {{  form.price }} </label>
+            {{ field }}
+          </div>
+
+
+    <input class="btn" type="submit" value='Разместить'/>
+</form>
+
+
+
+
+
+
+
+
+{% endblock %}

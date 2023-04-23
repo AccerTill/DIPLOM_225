@@ -1,0 +1,35 @@
+{%  extends 'team/base.html'  %}
+{% load static %}
+
+{%  block content  %}
+
+    <h1> Завершено: </h1>
+
+<ul>
+
+    {% for team in teams  %}
+    <li class='targets'>
+        <a href="{% url 'viewteam' team.id  %}" class = 'target_a'>
+
+        {% if team.important %}
+            <p class="imp"> <b> {{ team.title }} </b> </p>
+
+        {% else %}
+            {{ team.title }}
+        {% endif %}
+
+        {% if team.memo %}
+            -{{ team.memo }}
+        {% endif %}
+
+            {{ team.date_completed|date:'M j Y H:i' }}
+
+        </a>
+
+
+    </li>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

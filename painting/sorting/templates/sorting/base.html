@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="description" content="Сайт о живописи." />
+     <title>Title</title>
+     <link rel="stylesheet" href="{% static 'css/ustyleone.css' %}">
+     <link rel="icon"  type="image/x-icon"  href="{% static 'sorting/favicon.ico' %}">
+
+</head>
+    <body>
+
+<div class = 'menu'>
+    <div class = 'wrap'>
+            <div class="">
+                <a href =' {%  url "index" %}'>
+                    <img src='{% static "sorting/logo_history.jpg" %}' alt ="">
+                </a>
+            </div>
+
+            <ul>
+                <li><a href=" {%  url 'index' %} ">Главная</a></li>
+                <li><a href=" {%  url 'shop' %}  "> Галерея </a></li>
+                <li><a href="{% url 'completedsold' %}"> Проданные </a></li>
+                <li><a href=" {%  url 'blog:blogs' %}  ">Блог</a></li>
+                <li><a href=" {%  url 'loginuser' %} ">Авторизация</a></li>
+
+             </ul>
+    </div>
+</div>
+
+
+
+                      <div class ='wrap'>
+                        {% block content %}
+
+                        {% endblock %}
+                      </div>
+
+
+<div class = 'footer'>
+    <div class = 'wrap1 footer_content'>
+        <ul>
+            <li><a  class = 'footer_a' href=" {% static 'sorting/History_art.pdf' %} "  target='_blank'>Статья</a></li>
+            <li><a  class = 'footer_a' href=" {%  url 'about' %}" target="_blank">О сайте</a></li>
+            <li><a  class = 'footer_a' href=" {%  url 'feedback' %}" target="_blank">Отправить отзыв (для авторизованных пользователей)</a></li>
+            <li><a  class = 'footer_a' href=" {%  url 'feedbackall' %}" target="_blank">Отзывы</a></li>
+        </ul>
+
+
+
+    </div>
+
+
+    <div class = 'wrap1 footer_content'>
+
+         <ul>
+              <li>  <span> Контакты:  </span></li>
+              <li>  <span> Телефон: 123-45-67  </span></li>
+              <li>  <span> Почта: painting@mail.com  </span></li>
+         </ul>
+
+    </div>
+
+
+</div>
+
+
+
+    </body>
+
+</html>

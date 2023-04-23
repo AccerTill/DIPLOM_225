@@ -1,0 +1,74 @@
+{% extends 'sorting/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1> Галерея </h1>
+<p class='description'> Тут вы можете приобрести работы художников.</p>
+
+
+
+{% if user.is_authenticated %}
+
+                        <ul>
+                            <li class = 'shop_description  q'>
+                                <a href=" {%  url 'placing' %} ">  Разместить работу  </a>
+                            </li>
+                        </ul>
+
+
+{% else %}
+
+                    <ul>
+                        <li class = 'shop_description'>
+                            Для размещения работ в магазине нужно
+                            <a href="{% url 'loginuser' %}">
+                                Войти.
+                            </a>
+                        </li>
+                    </ul>
+
+{% endif %}
+
+
+
+<div class = 'wrap_shop'>
+
+
+
+{% for picture in pictures %}
+<div class = 'block_shop'>
+         <div class = 'text'>
+                <h2><a href="{{ project.links }}" target ='_blank' >{{ picture.name }}</a></h2>
+         </div>
+
+         <div class ='element'>
+                <div>
+                    <img class='pic' id='elem' src="{{ picture.picture.url }}" alt=''>
+                </div>
+         </div>
+
+         <div class = 'text'>
+                <p class ='genre'>Автор: {{ picture.author }}</p>
+                <p class ='genre'>Жанр: {{ picture.genre }}</p>
+                <p class ='genre'>Размер: {{ picture.size }}</p>
+                <p class ='genre'>Цена: {{ picture.price }}</p>
+         </div>
+
+
+        <div>
+              <a href ='{% url "picture" picture.id %}'>  <button>  Купить  </button></a>
+              {% if user.is_authenticated %}
+              <a href ='{% url "picture" picture.id %}'> <button> Редактировать </button></a>
+              {% endif %}
+        </div>
+</div>
+{% endfor %}
+
+
+</div>
+
+
+
+{% endblock %}

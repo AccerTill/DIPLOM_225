@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Сайт о живописи." />
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/ustyleone.css' %}">
+    <link rel="icon"  type="image/x-icon"  href="{% static 'sorting/favicon.ico' %}">
+</head>
+<body>
+
+
+
+
+{% if user.is_authenticated  %}
+
+<div class="menu">
+    <div class="wrap">
+        <div class="">
+            <a href =' {%  url "index" %}'>
+                <img src='{% static "sorting/logo_history.jpg" %}' alt ="">
+            </a>
+        </div>
+
+
+
+        <ul>
+
+            <li class="logo" id='user'><a href=""><img class='lll' src='{% static "sorting/zg.png" %}' alt =""> {{ user.username }} </a></li>
+            <li><a href ='{% url "createteam" %}'> Создать задачу </a></li>
+            <li><a href="{% url 'currentteam' %}"> Актуальные   </a></li>
+            <li><a href="{% url 'completedteam' %}"> Выполненные задачи </a></li>
+
+
+
+            <li>
+                <form action="{% url 'logoutuser' %}" method="post">
+                    {% csrf_token %}
+                    <button class = 'top'> Выйти. </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% else %}
+
+
+<div class="menu">
+    <div class="wrap">
+        <div class="">
+            <a href =' {%  url "index" %}'>
+                <img src='{% static "sorting/logo_history.jpg" %}' alt ="">
+            </a>
+        </div>
+
+
+
+
+        <ul>
+            <li class='logo2'><a href="{% url 'home' %}"> Главная  </a></li>
+            <li><a href="{% url 'signupuser' %}"> Регистрация </a></li>
+            <li><a href="{% url 'loginuser' %}"> Войти </a></li>
+        </ul>
+    </div>
+</div>
+
+
+{% endif %}
+
+
+
+
+    <div class='wrap'>
+         {%  block content  %}
+         {% endblock %}
+    </div>
+
+
+
+
+
+</body>
+</html>

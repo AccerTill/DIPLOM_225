@@ -1,0 +1,27 @@
+{% extends 'sorting/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<h2> Отзывы </h2>
+
+
+<div class = 'block'>
+    {% for feedback in feedbacks %}
+    <div class = 'block1'>
+                 <div class = 'text1'>
+
+                        <p class ='text_about'>Автор: {{ feedback.name }}</p>
+                        <p class ='text_about'> Текст отзыва: {{ feedback.text }}</p>
+                        <p class ='text_about'> Дата: {{ feedback.created }}</p>
+
+                 </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

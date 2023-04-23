@@ -1,0 +1,35 @@
+{% extends 'sorting/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<h1> Купленные картины </h1>
+
+<div class="wrap_completedsold">
+    {% for team in teams  %}
+<div class="block_completedsold">
+         <ul>
+             <li>{{ team.name }} </li>
+             <li> Состояние: {{ team.genre }} </li>
+             <li>  {{ team.price }} </li>
+         </ul>
+
+
+         <div class ='element'>
+            <div>
+                <img class='pic3'  src="{{ team.picture.url }}" alt=''>
+            </div>
+         </div>
+
+
+</div>
+
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}
