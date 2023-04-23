@@ -4,7 +4,7 @@
 
 
              <h1>  Живопись  </h1>
-             <p class="test">TEST</p>
+<!--             <p class="test">TEST</p>-->
 
 
 <div class='img' >
@@ -23,23 +23,22 @@
 <div class = 'block'>
 
     {% for project in projects %}
+<div class = 'block_main'>
 
         <div class = 'text'>
             <h2><a href="{{ project.links }}" target ='_blank' >{{ project.name }} </a></h2>
         </div>
 
-        <div class ='element'  >
-            <div>
+        <div class ='element' >
                 <img class='pic3' id="elem" src="{{ project.picture.url }}" alt=''>
-            </div>
         </div>
 
         <div class = 'text'>
             <p class ='genre'>{{ project.genre_author|safe }}</p>
         </div>
-
-    {% endfor %}
-
 </div>
+    {% endfor %}
+</div>
+
 
 {% endblock %}

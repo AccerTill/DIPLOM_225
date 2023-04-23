@@ -3,13 +3,14 @@
 /* 
                                    TEST */
 .test {
-     color: rgb(172, 50, 20) !important;
+     color: rgb(172, 106, 20) !important;
      font-size: xx-large;
      }
    
      
      
      /*                             PICTURES */
+
 
      #elem:active {
           transform: scale(1.8);
@@ -27,12 +28,13 @@
           position: relative;
      }
 
+
      .pic{
           max-height:400px;
           max-width: auto;
      }
 
-       .pic2{
+     .pic2{
           /* max-height:620px; */
           justify-content: center;
           opacity: .8;
@@ -44,12 +46,26 @@
           max-width: auto;
           /* justify-content: center; */
           box-shadow: 0px 0px 10px 5px #14336f;
+          /* align-items: center; */
+          display: block;
+          margin: 0 auto;
      }
+
+     .pic4{
+          max-height:300px;
+          max-width: auto;
+          /* justify-content: center; */
+          box-shadow: 0px 0px 10px 5px #14336f;
+          /* align-items: center; */
+          display: block;
+          margin: 0 auto;
+     }
+
+     
      
      .logo {
           max-width: 60px;
-      
-       }
+     }
 
      .pic{
           max-height:400px;
@@ -60,8 +76,8 @@
           align-content: center;
      }
 
-
-     /*                     СТРАНИЦА ОТЗЫВОВ                */
+ 
+     /*                                    СТРАНИЦА ОТЗЫВОВ                */
 
 
      .block {
@@ -75,7 +91,7 @@
 
      }
 
-  .text1 {
+     .text1 {
           align-items: left;
           color: #774d15;
           border: 1px solid rgb(54, 10, 110);
@@ -84,11 +100,9 @@
  
      }
 
-     /*          КНОПКИ */
+                    /*                 КНОПКИ */
 
-
-
-          
+         
      .btn {    
           background: #e0e0e0;    
           color: #000000;
@@ -111,7 +125,7 @@
      
 
      
-                           /* ЗАГОЛОВКИ ------------*/
+                           /*            ЗАГОЛОВКИ ------------*/
 
 
 h1 {
@@ -155,10 +169,10 @@ h2 {
 
     
  .genre {
-     color: rgb(73, 35, 160);
-     font-size: x-large;
+     color: rgb(63, 38, 133);
+     font-size: large;
      font-weight: 600;
-     text-shadow: 2px 2px 3px rebeccapurple;
+     text-shadow: 2px 1px 1px rgb(143, 108, 177);
      text-align: center;
      text-indent: 30px;
 }
@@ -177,14 +191,17 @@ h2 {
 
  /*                       ШРИФТЫ               */
 
- /* на странице ABOUT */
+
+
+ /*                                       ABOUT                            */
  .about {
-     color: rgb(60, 4, 112);
+     color: rgb(255, 255, 255);
      font-size: x-large;
      font-weight: 600;
      text-shadow: 2px 1px 3px rgb(1, 0, 2);
      text-align: left;
      text-indent: 30px;
+     padding-right: 20px;
 }
 
 
@@ -192,7 +209,7 @@ h2 {
 
 
 
-                                    /* FORM */
+                                    /*   FORM */
 
      
      
@@ -214,7 +231,7 @@ h2 {
      
     
      
-        
+  /*                         ГЛАВНАЯ СТРАНИЦА */
      
      .block {
           display: flex;
@@ -222,7 +239,21 @@ h2 {
           flex-wrap: wrap;
           justify-content: center;
           margin-bottom: 30px;
-          box-shadow: #baa8ec;
+          /* box-shadow: #baa8ec; */
+  /* border: 1px solid rgb(39, 19, 94); */
+  padding: 10px;
+  margin: 10px;
+      
+     }
+
+     .block_main {
+      /* border: 1px solid black; */
+      margin: 5 px;
+      padding: 10 px;
+      justify-content: center;
+       border: 1px solid rgb(39, 19, 94); 
+       margin-bottom: 20px;
+
      }
      
      .block1 {
